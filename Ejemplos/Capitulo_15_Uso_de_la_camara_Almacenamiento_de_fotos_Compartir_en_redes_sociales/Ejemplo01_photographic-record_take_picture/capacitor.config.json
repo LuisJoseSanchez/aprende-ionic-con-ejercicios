@@ -1,8 +1,9 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "photographic-record",
+  "appId": "com.aprendeionic.photorecord",
+  "appName": "Photographic Record",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
-  "cordova": {}
+  "cordova": {},
+  "linuxAndroidStudioPath": "/snap/android-studio/81/android-studio/bin/studio.sh"
 }
