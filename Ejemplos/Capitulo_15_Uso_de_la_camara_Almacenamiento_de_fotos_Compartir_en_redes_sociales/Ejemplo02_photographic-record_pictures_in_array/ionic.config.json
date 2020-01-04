@@ -1,0 +1,7 @@
+{
+  "name": "photographic-record",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
