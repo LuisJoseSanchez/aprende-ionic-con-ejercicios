@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SafeResourceUrl } from '@angular/platform-browser';
 import { CameraService } from '../services/camera.service';
+import { PhotoService } from '../services/photo.service';
 
 
 @Component({
@@ -12,15 +13,17 @@ export class HomePage {
 
   photoPaths: SafeResourceUrl[] = [];
   
-  constructor(private cameraService: CameraService) {}
+  constructor(
+    private cameraService: CameraService,
+    private photoService: PhotoService
+  ) {}
 
   async takePicture() {
     const photoPath = await this.cameraService.takePicture();
-    this.photoPaths.unshift(photoPath);
+    this.photoService.insertPhoto(photoPath);
   }
 
   removePhoto(path: SafeResourceUrl) {
-    const i = this.photoPaths.indexOf(path);
-    this.photoPaths.splice(i, 1);
+    this.photoService.removePhoto(path);
   }
 }

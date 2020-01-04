@@ -7,12 +7,12 @@
 </ion-header>
 
 <ion-content>
-  <p *ngIf="!photoPaths.length === 0" class="ion-padding">
+  <p *ngIf="photoService.getPhotos() === 0" class="ion-padding">
     No has sacado ninguna foto ¿a qué esperas?
   </p>
   
   <ion-list lines="none">
-    <ion-item-sliding *ngFor="let path of photoPaths">
+    <ion-item-sliding *ngFor="let path of photoService.getPhotos()">
       <ion-item >
         <img class="image-item" [src]="path">
       </ion-item>
