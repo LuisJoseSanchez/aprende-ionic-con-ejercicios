@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Plugins, CameraResultType, CameraSource } from '@capacitor/core';
-import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 })
 export class HomePage {
 
-  photoPath: SafeResourceUrl;
+  photoPaths: SafeResourceUrl[] = [];
   
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -17,12 +17,11 @@ export class HomePage {
     const image = await Plugins.Camera.getPhoto({
       quality: 60,
       allowEditing: false,
-      //resultType: CameraResultType.DataUrl,
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera
     });
 
-    // this.photoPath = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.dataUrl));
-    this.photoPath = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.webPath));
+    const photoPath = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.webPath));
+    this.photoPaths.unshift(photoPath);
   }
 }
