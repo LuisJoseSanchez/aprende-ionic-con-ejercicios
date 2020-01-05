@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Photographic Record
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p *ngIf="photoService.getPhotos() === 0" class="ion-padding">
+    No has sacado ninguna foto ¿a qué esperas?
+  </p>
+  
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let path of photoService.getPhotos()">
+      <ion-item >
+        <img class="image-item" [src]="path">
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="danger" (click)="removePhoto(path)">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="takePicture()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
