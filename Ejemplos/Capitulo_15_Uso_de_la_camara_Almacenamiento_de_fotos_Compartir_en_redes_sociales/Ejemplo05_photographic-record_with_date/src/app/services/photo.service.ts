@@ -1,25 +1,30 @@
 import { Injectable } from '@angular/core';
 import { SafeResourceUrl } from '@angular/platform-browser';
+import { PhotoRecord } from '../model/photo-record';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PhotoService {
 
-  photoPaths: SafeResourceUrl[] = [];
+  photos: PhotoRecord[] = [];
 
   constructor() { }
 
   insertPhoto(path: SafeResourceUrl) {
-    this.photoPaths.unshift(path);
+    const record = {
+      path: path,
+      date: new Date()
+    }
+    this.photos.unshift(record);
   }
 
   removePhoto(path: SafeResourceUrl) {
-    const i = this.photoPaths.indexOf(path);
-    this.photoPaths.splice(i, 1);
+    const i = this.photos.map(p => p.path).indexOf(path);
+    this.photos.splice(i, 1);
   }
 
   getPhotos() {
-    return this.photoPaths;
+    return this.photos;
   }
 }
