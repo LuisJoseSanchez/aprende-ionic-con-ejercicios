@@ -11,7 +11,11 @@ export class PhotoService {
 
   photos: PhotoRecord[] = [];
 
-  constructor(private storage: Storage) { }
+  constructor(private storage: Storage) {
+    this.storage.get('photos').then(
+      data => this.photos = data == null ? [] : data
+    );
+  }
 
   insertPhoto(path: SafeResourceUrl) {
     const record = {
