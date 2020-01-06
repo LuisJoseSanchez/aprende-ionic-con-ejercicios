@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <p *ngIf="photoService.getPhotos() === 0" class="ion-padding">
+  <p *ngIf="photoService.getPhotos().length === 0" class="ion-padding">
     No has sacado ninguna foto ¿a qué esperas?
   </p>
   
