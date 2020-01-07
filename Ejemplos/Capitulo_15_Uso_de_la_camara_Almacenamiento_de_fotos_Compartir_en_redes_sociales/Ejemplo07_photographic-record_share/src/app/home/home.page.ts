@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CameraService } from '../services/camera.service';
 import { PhotoService } from '../services/photo.service';
+import { ShareService } from '../services/share.service';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class HomePage {
 
   constructor(
     private cameraService: CameraService,
-    private photoService: PhotoService
+    private photoService: PhotoService,
+    private shareService: ShareService
   ) {}
 
   async takePicture() {
@@ -24,6 +26,7 @@ export class HomePage {
     this.photoService.removePhoto(path);
   }
 
-  sharePhoto(path: string) {
+  async sharePhoto(path: string) {
+    await this.shareService.sharePhoto(path);
   }
 }
