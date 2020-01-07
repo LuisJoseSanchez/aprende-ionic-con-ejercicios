@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SafeResourceUrl } from '@angular/platform-browser';
 import { CameraService } from '../services/camera.service';
 import { PhotoService } from '../services/photo.service';
 
@@ -11,8 +10,6 @@ import { PhotoService } from '../services/photo.service';
 })
 export class HomePage {
 
-  photoPaths: SafeResourceUrl[] = [];
-  
   constructor(
     private cameraService: CameraService,
     private photoService: PhotoService
@@ -23,7 +20,10 @@ export class HomePage {
     this.photoService.insertPhoto(photoPath);
   }
 
-  removePhoto(path: SafeResourceUrl) {
+  removePhoto(path: string) {
     this.photoService.removePhoto(path);
+  }
+
+  sharePhoto(path: string) {
   }
 }
