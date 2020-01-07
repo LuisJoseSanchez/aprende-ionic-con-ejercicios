@@ -26,7 +26,7 @@ export class HomePage {
     this.photoService.removePhoto(path);
   }
 
-  async sharePhoto(path: string) {
-    await this.shareService.sharePhoto(path);
+  sharePhoto(path: string) {
+    this.shareService.sharePhoto(path);
   }
 }

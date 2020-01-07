@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Plugins } from '@capacitor/core';
-
-const { Share } = Plugins;
+import { SocialSharing } from "@ionic-native/social-sharing/ngx";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShareService {
 
-  constructor() { }
+  constructor(
+    private socialSharing: SocialSharing
+  ) { }
 
-  async sharePhoto(path: string) {
-    const shareOptions = {
-      title: 'Photorecord es guay',
-      text: 'Foto que no te puedes perder',
-      url: path,
-      dialogTitle: 'Comparte con tus amigos'
-    }
-
-    await Share.share(shareOptions);
+  sharePhoto(path: string) {
+    this.socialSharing.share(
+      'Photorecord es guay',
+      null,
+      path,
+      null
+    );
   }
 }
