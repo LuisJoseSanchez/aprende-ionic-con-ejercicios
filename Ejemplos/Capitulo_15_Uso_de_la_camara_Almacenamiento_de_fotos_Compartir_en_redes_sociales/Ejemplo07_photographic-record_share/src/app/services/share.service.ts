@@ -11,10 +11,12 @@ export class ShareService {
   ) { }
 
   sharePhoto(path: string) {
+    const pathToFile = path.replace('http://localhost/_capacitor_file', 'file://');
+
     this.socialSharing.share(
-      'Photorecord es guay',
+      'Photorecord está genial',
       null,
-      path,
+      pathToFile,
       null
     );
   }
