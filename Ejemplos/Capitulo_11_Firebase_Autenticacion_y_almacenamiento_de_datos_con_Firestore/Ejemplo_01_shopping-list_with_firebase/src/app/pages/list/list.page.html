@@ -4,8 +4,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  {{ items | async | json }}
-  <br>
-  <button (click)="addItem()">Añadir elemento</button>
+<ion-content class="ion-padding">
+  <ion-chip *ngFor="let item of items | async">
+    <ion-avatar>
+      <img [src]="item.imageUrl">
+    </ion-avatar>
+    <ion-label>{{ item.name }} <strong>{{ item.quantity }}</strong></ion-label>
+    <ion-icon name="close-circle" (click)="itemService.deleteItemById(item.itemId)"></ion-icon>
+  </ion-chip>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button
+      (click)="addItem()"
+      color="success">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
+
 </ion-content>

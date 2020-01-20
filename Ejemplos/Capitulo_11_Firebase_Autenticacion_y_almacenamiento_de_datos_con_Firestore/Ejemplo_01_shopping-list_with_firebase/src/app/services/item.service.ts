@@ -24,4 +24,8 @@ export class ItemService {
       }))
     );
   }
+
+  public deleteItemById(id: string): Promise<void> {
+    return this.db.collection('items').doc(id).delete();
+  }
 }
