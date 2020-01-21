@@ -25,4 +25,8 @@ export class ListPage implements OnInit {
   addItem() {
     this.router.navigateByUrl('/create-item');
   }
+
+  goEditItem(id: string) {
+    this.router.navigateByUrl('edit-item/' + id);
+  }
 }

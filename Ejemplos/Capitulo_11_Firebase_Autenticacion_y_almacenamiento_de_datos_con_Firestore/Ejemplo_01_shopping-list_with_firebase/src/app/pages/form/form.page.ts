@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class FormPage implements OnInit {
 
   item: Item = {name: '', quantity: 1, imageUrl: ''};
+  pageTitle: string = 'Nuevo elemento';
 
   constructor(
     private itemService: ItemService,
