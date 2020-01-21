@@ -28,4 +28,12 @@ export class ItemService {
   public deleteItemById(id: string): Promise<void> {
     return this.db.collection('items').doc(id).delete();
   }
+
+  public updateItemById(id: string, item: Item): Promise<void> {
+    return this.db.collection('items').doc(id).set(item);
+  }
+
+  public getItemById(id: string): Observable<Item> {
+    return this.db.collection('items').doc<Item>(id).valueChanges();
+  }
 }
