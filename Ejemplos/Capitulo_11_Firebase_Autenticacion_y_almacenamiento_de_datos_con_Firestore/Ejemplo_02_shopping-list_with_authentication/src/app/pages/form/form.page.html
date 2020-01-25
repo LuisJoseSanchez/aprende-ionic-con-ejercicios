@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="list"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">{{ pageTitle }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input
+        clearInput
+        class="text"
+        [(ngModel)]="item.name">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input
+        class="text"
+        type="number"
+        min="1"
+        [(ngModel)]="item.quantity">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">URL de la imagen</ion-label>
+      <ion-input
+        class="text"
+        clearInput
+        [(ngModel)]="item.imageUrl">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    expand="block"
+    class="text"
+    color="success"
+    shape="round"
+    (click)="addItem()">
+    Guardar
+  </ion-button>
+
+  <ion-button
+    expand="block"
+    class="text"
+    color="danger"
+    shape="round"
+    href="/">
+    Cancelar
+  </ion-button>
+</ion-content>
