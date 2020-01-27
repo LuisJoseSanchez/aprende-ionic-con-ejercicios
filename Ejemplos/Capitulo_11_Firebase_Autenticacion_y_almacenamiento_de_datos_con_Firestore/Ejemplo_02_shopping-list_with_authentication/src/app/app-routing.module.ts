@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'edit-item/:id',
     loadChildren: () => import('./pages/form/form.module').then( m => m.FormPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({
