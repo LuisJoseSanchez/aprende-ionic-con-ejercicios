@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { first } from 'rxjs/operators';
+import { User } from 'firebase';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +11,18 @@ import { first } from 'rxjs/operators';
 })
 export class LoginPage implements OnInit {
 
-  user: any;
+  user: User;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  login() {
-    this.authService.login("alan@gmail.com", "123456").then(
-        this.user = this.authService.getCurrentUser() //.pipe(first()).toPromise()
+  async login() {
+    await this.authService.login("alan@gmail.com", "123456");
+    console.log("logueado");
+    this.authService.getCurrentUser().subscribe(
+      data => this.user = data
     );
   }
 }
