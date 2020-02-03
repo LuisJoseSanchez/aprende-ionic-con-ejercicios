@@ -16,13 +16,17 @@ export class ItemService {
   }
 
   public getItems(): Observable<Item[]> {
-    return this.db.collection('items').snapshotChanges().pipe(
-      map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as Item;
-        const itemId = a.payload.doc.id;
-        return { itemId, ...data };
-      }))
-    );
+    return this.db.collection('items').snapshotChanges()
+      .pipe(
+        map(
+          snaps => snaps.map(
+            snap => <Item>{
+              itemId: snap.payload.doc.id,
+              ...snap.payload.doc.data() as Item
+            }
+          )
+        )
+      );
   }
 
   public deleteItemById(id: string): Promise<void> {
