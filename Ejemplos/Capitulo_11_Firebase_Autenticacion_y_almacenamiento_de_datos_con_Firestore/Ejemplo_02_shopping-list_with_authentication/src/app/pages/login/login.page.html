@@ -1,10 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title class="title">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button (click)="login()">Login</ion-button>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <ion-icon name="contact" class="person" align-self-center></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item>
+      <ion-label text-center position="floating">Correo electrónico</ion-label>
+      <ion-input text-center clearInput class="text" [(ngModel)]="email">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label text-center position="floating">Contraseña</ion-label>
+      <ion-input text-center class="text" type="password" [(ngModel)]="password">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    expand="block"
+    class="text"
+    color="success"
+    shape="round"
+    (click)="login()">
+    Aceptar
+  </ion-button>
+
   {{ user | json }}
 </ion-content>
