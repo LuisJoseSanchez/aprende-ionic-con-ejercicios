@@ -28,12 +28,25 @@
 
   <ion-button
     expand="block"
-    class="text"
+    class="text capitalize"
     color="success"
     shape="round"
     (click)="login()">
     Aceptar
   </ion-button>
+
+  <br>
+  <div class="center">
+    <a class="text" href="/create-account">
+      <ion-icon name="person-add"></ion-icon>
+      Crear una cuenta
+    </a>
+    <br>
+    <a class="text" href="/recover-password">
+      <ion-icon name="mail"></ion-icon>
+      Recuperar contraseña
+    </a>
+  </div>
 
   {{ user | json }}
 </ion-content>
