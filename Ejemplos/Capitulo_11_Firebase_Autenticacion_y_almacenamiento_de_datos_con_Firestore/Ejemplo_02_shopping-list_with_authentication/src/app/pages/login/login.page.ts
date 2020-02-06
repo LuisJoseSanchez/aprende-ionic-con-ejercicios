@@ -20,7 +20,6 @@ export class LoginPage implements OnInit {
 
   async login() {
     await this.authService.login("alan@gmail.com", "123456");
-    console.log("logueado");
     this.authService.getCurrentUser().subscribe(
       data => this.user = data
     );
