@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { User } from 'firebase';
+import { promise } from 'protractor';
+import { first } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +23,15 @@ export class AuthService {
 
   getCurrentUser(): Observable<User> {
     return this.afAuth.authState;
+  }
+
+  logout(): Promise<void> {
+    return this.afAuth.auth.signOut();
+  }
+
+  userIsLogged(): Promise<boolean> {
+    return this.getCurrentUser()
+      .toPromise()
+      .then(data => data == null);
   }
 }

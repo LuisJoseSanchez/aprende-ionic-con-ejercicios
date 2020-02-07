@@ -3,6 +3,7 @@ import { ItemService } from 'src/app/services/item.service';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/model/item';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-list',
@@ -15,12 +16,18 @@ export class ListPage implements OnInit {
 
   constructor(
     private itemService: ItemService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
     ) {
     this.items = this.itemService.getItems();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.authService.getCurrentUser()
+      .subscribe(
+        data => console.log(data)
+      );
+  }
 
   addItem() {
     this.router.navigateByUrl('/create-item');
