@@ -23,10 +23,11 @@ export class ListPage implements OnInit {
   }
 
   ngOnInit() {
+    /*
     this.authService.getCurrentUser()
       .subscribe(
         data => console.log(data)
-      );
+      );*/
   }
 
   addItem() {
