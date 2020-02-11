@@ -19,15 +19,12 @@ export class ListPage implements OnInit {
     private router: Router,
     private authService: AuthService
     ) {
-    this.items = this.itemService.getItems();
+      this.authService.getCurrentUser().subscribe(
+        () => this.items = this.itemService.getItems()
+      );
   }
 
   ngOnInit() {
-    /*
-    this.authService.getCurrentUser()
-      .subscribe(
-        data => console.log(data)
-      );*/
   }
 
   addItem() {

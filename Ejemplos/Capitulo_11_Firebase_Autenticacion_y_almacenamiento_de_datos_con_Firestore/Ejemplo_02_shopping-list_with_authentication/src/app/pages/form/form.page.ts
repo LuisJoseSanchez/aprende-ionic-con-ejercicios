@@ -34,7 +34,9 @@ export class FormPage implements OnInit {
 
   addItem() {
     if (this.action === 'create') {
-      this.itemService.addItem(this.item);
+      console.log('Entra en addItem del formulario');
+      this.itemService.addItem(this.item)
+        .catch(error => console.error(error));
     } else {
       this.itemService.updateItemById(this.id, this.item);
     }
