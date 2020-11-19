@@ -2,7 +2,7 @@
 
 Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.com/aprendeionic).
 
-<img src="aprendeionicconejercicios400.png">
+<a href="https://leanpub.com/aprendeionic" target="_blank"><img src="aprendeionicconejercicios400.png"></a>
 
 ## Capítulo 2. Páginas, enrutamiento, componentes y directivas
 
