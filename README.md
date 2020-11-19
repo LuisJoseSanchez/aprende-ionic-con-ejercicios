@@ -8,7 +8,9 @@ Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.c
 
 ### Ejemplos
 
-* [Ejemplo con información sobre Málaga](https://github.com/LuisJoseSanchez/aprende-ionic-pages-routing-components)
+* [Ejemplo con información sobre Málaga. Un botón y una página informativa](https://github.com/LuisJoseSanchez/aprende-ionic-pages-routing-components)
+
+* [Ejemplo con información sobre Málaga usando componentes](https://github.com/LuisJoseSanchez/aprende-ionic-pages-routing-components-2)
 
 ## Capítulo 3. Interpolación, filtros y eventos
 
