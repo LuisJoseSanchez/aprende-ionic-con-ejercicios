@@ -20,6 +20,6 @@ Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.c
 
 ### Ejemplos
 
-* [Aplicación completa de gestión de lista de tareas sin persistencia]()
+* [Aplicación completa de gestión de lista de tareas sin persistencia](https://github.com/LuisJoseSanchez/aprende-ionic-todo-list)
 
 * [Aplicación completa de gestión de lista de tareas con persistencia en el dispositivo]()
