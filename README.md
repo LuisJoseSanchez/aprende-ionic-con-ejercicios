@@ -8,12 +8,18 @@ Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.c
 
 ### Ejemplos
 
-[Ejemplo con información sobre Málaga](https://github.com/LuisJoseSanchez/aprende-ionic-pages-routing-components)
+* [Ejemplo con información sobre Málaga](https://github.com/LuisJoseSanchez/aprende-ionic-pages-routing-components)
 
 ## Capítulo 3. Interpolación, filtros y eventos
 
 ### Ejemplos
 
+* [Proyecto con 8 ejemplos sencillos de interpolación, filtros y eventos](https://github.com/LuisJoseSanchez/aprende-ionic-interpolation-pipes-events)
+
 ## Capítulo 4. Aplicación “Lista de tareas”. Servicios y almacenamiento local.
 
 ### Ejemplos
+
+* [Aplicación completa de gestión de lista de tareas sin persistencia]()
+
+* [Aplicación completa de gestión de lista de tareas con persistencia en el dispositivo]()
