@@ -4,6 +4,15 @@ Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.c
 
 <a href="https://leanpub.com/aprendeionic" target="_blank"><img src="aprendeionicconejercicios400.png"></a>
 
+## Capítulo 1. Introducción a Ionic - Instalación y primeros pasos
+
+### Ejercicios resueltos
+
+* [Ejercicios 1, 2, 3 y 4]()
+
+* [Ejercicio 5]()
+
+
 ## Capítulo 2. Páginas, enrutamiento, componentes y directivas
 
 ### Ejemplos
