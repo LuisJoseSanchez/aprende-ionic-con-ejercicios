@@ -8,9 +8,9 @@ Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.c
 
 ### Ejercicios resueltos
 
-* [Ejercicios 1, 2, 3 y 4]()
+* [Ejercicios 1, 2, 3 y 4](https://github.com/LuisJoseSanchez/aprende-ionic-capitulo01-ejercicios-1-2-3-y-4)
 
-* [Ejercicio 5]()
+* [Ejercicio 5](https://github.com/LuisJoseSanchez/aprende-ionic-capitulo01-ejercicio-5)
 
 
 ## Capítulo 2. Páginas, enrutamiento, componentes y directivas
