@@ -27,6 +27,10 @@ Ejemplos y soluciones del libro [Aprende Ionic con Ejercicios](https://leanpub.c
 
 * [Proyecto con 8 ejemplos sencillos de interpolación, filtros y eventos](https://github.com/LuisJoseSanchez/aprende-ionic-interpolation-pipes-events)
 
+### Ejercicios resueltos
+
+* [Ejercicios del 1 al 7](https://github.com/LuisJoseSanchez/aprende-ionic-capitulo03-ejercicios-del-1-al-7)
+
 ## Capítulo 4. Aplicación “Lista de tareas”. Servicios y almacenamiento local.
 
 ### Ejemplos
