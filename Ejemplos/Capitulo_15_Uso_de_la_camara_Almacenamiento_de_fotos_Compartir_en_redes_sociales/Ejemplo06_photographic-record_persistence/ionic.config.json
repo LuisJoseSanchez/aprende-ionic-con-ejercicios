@@ -1,8 +1,0 @@
-{
-  "name": "photographic-record",
-  "integrations": {
-    "capacitor": {},
-    "cordova": {}
-  },
-  "type": "angular"
-}
